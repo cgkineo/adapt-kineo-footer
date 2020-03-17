@@ -1,6 +1,6 @@
 # adapt-footer
 
-**Footer** can be applied at menu and page level.
+**Footer** can be configured at menu and page level.
 
 ## Settings overview
 
