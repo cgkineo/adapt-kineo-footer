@@ -1,0 +1,7 @@
+// apply to course.json for menu footer
+// apply to contentObject.json for page footer
+"_footer": {
+  "_isEnabled": true,
+  "_footerContent": "CGKineo copyright 2019",
+  "_classes": ""
+}

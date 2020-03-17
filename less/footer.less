@@ -1,0 +1,29 @@
+/* global menu / page footer */
+.footer {
+	background-color: @background-color-inverted;
+
+	.footer-inner {
+		display: flex;
+		justify-content: flex-start; // inherit from text direction by default (ltr / rtl)
+		padding: 20px;
+		color: @font-color-inverted;
+
+		/* justify content options */
+		.reverse-content-direction& {
+			justify-content: flex-end;
+		}
+
+		.center-content& {
+			justify-content: center;
+		}
+
+		.space-around-content& {
+			justify-content: space-around;
+		}
+
+		.space-between-content& {
+			justify-content: space-between;
+		}
+	}
+
+}

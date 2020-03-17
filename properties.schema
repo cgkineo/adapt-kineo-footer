@@ -1,0 +1,84 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "properties":{
+  	"pluginLocations": {
+  	  "type":"object",
+  	  "required":true,
+  	  "properties":{
+    		"config": {
+    		  "type":"object"
+    		},
+        "course": {
+          "type":"object",
+          "properties": {
+            "_footer": {
+              "type": "object",
+              "legend": "Footer",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox"
+                },
+                "_footerContent": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Item Body",
+                  "inputType": "TextArea"
+                },
+                "_classes": {
+                  "type":"string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text"
+                }
+              }
+            }
+          }
+        },
+    		"contentobject": {
+    		  "type":"object",
+          "properties": {
+            "_footer": {
+              "type": "object",
+              "legend": "Footer",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox"
+                },
+                "_footerContent": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Item Body",
+                  "inputType": "TextArea"
+                },
+                "_classes": {
+                  "type":"string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text"
+                }
+              }
+            }
+          }
+    		},
+    		"article": {
+    		  "type":"object"
+    		},
+    		"block": {
+    		  "type":"object"
+    		},
+    		"component": {
+    		  "type":"object"
+    		}
+  	  }
+  	}
+  }
+}

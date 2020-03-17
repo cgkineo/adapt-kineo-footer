@@ -1,0 +1,15 @@
+{
+    "name": "adapt-footer",
+    "framework": ">=2",
+    "version": "0.0.4",
+    "displayName": "Footer",
+    "extension": "footer",
+    "targetAttribute": "_footer",
+    "description": "A menu and page level footer that consists of a textarea and pre-bundled layout classes",
+    "main": "/js/adapt-footer.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-extension"
+    ],
+    "license": "GPLv3"
+}
