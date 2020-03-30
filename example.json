@@ -1,7 +1,32 @@
-    // apply to course.json for menu footer
-    // apply to contentObject.json for page footer
+    // Menu + global page footer
+    // apply to course.json
     "_footer": {
         "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2019",
+        "_footerContent": "CGKineo copyright 2020",
+        "_classes": ""
+    }
+
+    // apply to contentObject.json
+    "_footer": {
+        "_isEnabled": true
+    }
+    //
+
+
+    // Menu only footer
+    // apply to course.json
+    "_footer": {
+        "_isEnabled": true,
+        "_footerContent": "CGKineo copyright 2020",
+        "_classes": ""
+    }
+    //
+
+
+    // Page only footer
+    // apply to contentObject.json
+    "_footer": {
+        "_isEnabled": true,
+        "_footerContent": "CGKineo copyright 2020",
         "_classes": ""
     }
