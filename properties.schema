@@ -4,13 +4,13 @@
   "id": "http://jsonschema.net",
   "required":false,
   "properties":{
-  	"pluginLocations": {
-  	  "type":"object",
-  	  "required":true,
-  	  "properties":{
-    		"config": {
-    		  "type":"object"
-    		},
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
         "course": {
           "type":"object",
           "properties": {
@@ -40,8 +40,8 @@
             }
           }
         },
-    		"contentobject": {
-    		  "type":"object",
+        "contentobject": {
+          "type":"object",
           "properties": {
             "_footer": {
               "type": "object",
@@ -68,17 +68,17 @@
               }
             }
           }
-    		},
-    		"article": {
-    		  "type":"object"
-    		},
-    		"block": {
-    		  "type":"object"
-    		},
-    		"component": {
-    		  "type":"object"
-    		}
-  	  }
-  	}
+        },
+        "article": {
+          "type":"object"
+        },
+        "block": {
+          "type":"object"
+        },
+        "component": {
+          "type":"object"
+        }
+      }
+    }
   }
 }
