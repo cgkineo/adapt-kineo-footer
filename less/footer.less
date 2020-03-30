@@ -1,29 +1,33 @@
-/* global menu / page footer */
 .footer {
-  background-color: @background-color-inverted;
-
-  .footer-inner {
+  &__inner {
     display: flex;
-    justify-content: flex-start; // inherit from text direction by default (ltr / rtl)
-    padding: 20px;
-    color: @font-color-inverted;
-
-    /* justify content options */
-    .reverse-content-direction& {
-      justify-content: flex-end;
-    }
-
-    .center-content& {
-      justify-content: center;
-    }
-
-    .space-around-content& {
-      justify-content: space-around;
-    }
-
-    .space-between-content& {
-      justify-content: space-between;
-    }
+    .l-container-responsive(@max-width);
   }
 
+  &.reverse-content-direction &__inner {
+    justify-content: flex-end;
+  }
+
+  &.center-content &__inner {
+    justify-content: center;
+  }
+
+  &.space-around-content &__inner {
+    justify-content: space-around;
+  }
+
+  &.space-between-content &__inner {
+    justify-content: space-between;
+  }
+}
+
+// --------------------------------------------------
+// --------------------------------------------------
+// THEME
+// --------------------------------------------------
+// --------------------------------------------------
+.footer {
+  &__inner {
+    padding: @item-padding;
+  }
 }
