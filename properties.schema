@@ -1,18 +1,18 @@
 {
-  "type":"object",
+  "type": "object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
-  "required":false,
-  "properties":{
-  	"pluginLocations": {
-  	  "type":"object",
-  	  "required":true,
-  	  "properties":{
-    		"config": {
-    		  "type":"object"
-    		},
+  "required": false,
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
         "course": {
-          "type":"object",
+          "type": "object",
           "properties": {
             "_footer": {
               "type": "object",
@@ -31,7 +31,7 @@
                   "inputType": "TextArea"
                 },
                 "_classes": {
-                  "type":"string",
+                  "type": "string",
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text"
@@ -40,8 +40,8 @@
             }
           }
         },
-    		"contentobject": {
-    		  "type":"object",
+        "contentobject": {
+          "type": "object",
           "properties": {
             "_footer": {
               "type": "object",
@@ -60,7 +60,7 @@
                   "inputType": "TextArea"
                 },
                 "_classes": {
-                  "type":"string",
+                  "type": "string",
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text"
@@ -68,17 +68,17 @@
               }
             }
           }
-    		},
-    		"article": {
-    		  "type":"object"
-    		},
-    		"block": {
-    		  "type":"object"
-    		},
-    		"component": {
-    		  "type":"object"
-    		}
-  	  }
-  	}
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
   }
 }
