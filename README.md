@@ -12,4 +12,12 @@ Some layout classes are pre-bundled:
 >**space-between-content** : Content is positioned with space between items.
 >**space-around-content** : Content is positioned with space before, between and after items.
 
-Layout classes are based on css display flex properties.
+Layout classes are based on CSS `display: flex;` properties.
+
+----------------------------
+**Version number:** 1.0.0  
+**Framework versions:** 5+  
+**Author / maintainer:** CGKineo  
+**Accessibility support:** WAI AA  
+**RTL support:** Yes  
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera  

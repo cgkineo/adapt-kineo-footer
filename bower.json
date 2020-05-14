@@ -1,15 +1,15 @@
 {
-    "name": "adapt-footer",
-    "framework": ">=2",
-    "version": "0.0.4",
-    "displayName": "Footer",
-    "extension": "footer",
-    "targetAttribute": "_footer",
-    "description": "Menu and page level footer which consists of a text area and some pre-bundled layout classes",
-    "main": "/js/adapt-footer.js",
-    "keywords": [
-        "adapt-plugin",
-        "adapt-extension"
-    ],
-    "license": "GPLv3"
+  "name": "adapt-footer",
+  "version": "1.0.0",
+  "framework": ">=5",
+  "extension": "footer",
+  "displayName": "Footer",
+  "description": "An extension that enables menu and page level footers which consist of a text area and some pre-bundled layout classes",
+  "main": "/js/adapt-footer.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_footer"
 }
