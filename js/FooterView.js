@@ -7,8 +7,6 @@ export default class FooterView extends Backbone.View {
   className() { return 'footer'; }
 
   initialize() {
-    const footer = this.model.get('_footer');
-    if (!footer?._isEnabled) return;
     this.setUpCourseContentInheritance();
     this.hideUntilTrickleEnded();
     this.render();
