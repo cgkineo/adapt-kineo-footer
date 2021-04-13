@@ -15,8 +15,8 @@ Some layout classes are pre-bundled:
 Layout classes are based on CSS `display: flex;` properties.
 
 ----------------------------
-**Version number:** 1.0.0  
-**Framework versions:** 5+  
+**Version number:** 1.1.0  
+**Framework versions:** 5.8+  
 **Author / maintainer:** CGKineo  
 **Accessibility support:** WAI AA  
 **RTL support:** Yes  
