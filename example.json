@@ -1,32 +1,42 @@
-    // Menu + global page footer
-    // apply to course.json
-    "_footer": {
-        "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2020",
-        "_classes": ""
-    }
-
-    // apply to contentObject.json
-    "_footer": {
-        "_isEnabled": true
-    }
-    //
+// NOTE: Classes intentionally do not cascade since there is no way to
+// distinguish the desire for classes to be applied to all pages from
+// the desire to have the class applied only to the course menu.
+// While classes applied in contentObjects.json will override classes
+// applied in course.json, there is no way to *remove* them without
+// overriding with an "anti-class".
 
 
-    // Menu only footer
-    // apply to course.json
-    "_footer": {
-        "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2020",
-        "_classes": ""
-    }
-    //
+// Menu + page global footer
+//-----------------------------
+// Apply to course.json:
+"_footer": {
+"_isEnabled": true,
+"_footerContent": "CGKineo copyright 2020",
+"_classes": ""
+}
+
+// and apply to contentObject.json:
+"_footer": {
+"_isEnabled": true,
+"_classes": ""
+}
 
 
-    // Page only footer
-    // apply to contentObject.json
-    "_footer": {
-        "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2020",
-        "_classes": ""
-    }
+// Menu-only footer
+//-----------------------------
+// Apply to course.json:
+"_footer": {
+"_isEnabled": true,
+"_footerContent": "CGKineo copyright 2020",
+"_classes": ""
+}
+
+
+// Page-only footer
+//-----------------------------
+// Apply to contentObject.json:
+"_footer": {
+"_isEnabled": true,
+"_footerContent": "CGKineo copyright 2020",
+"_classes": ""
+}
