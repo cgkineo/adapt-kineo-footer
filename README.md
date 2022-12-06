@@ -29,7 +29,7 @@ The first class of two is required to apply a solid background color to the foot
 The `footer-color` mixin can be extended to include custom colors by adding another entry [here](https://github.com/cgkineo/adapt-footer/blob/master/less/footer.less#L51).
 
 ### \_horizontalAlignment (string):
-Defines the horizontal alignment for the footer content. Values available utilise the CSS property [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) and by default are:
+Defines the horizontal alignment for the footer content. Values available utilise the CSS property [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content). The default value is `start`. It contains the following settings:
 * `start` (Aligns the content with the natural page direction. In a left-to-right course this is left by default.)
 * `center` (Aligns the content to the center of the container.)
 * `end` (Aligns the content to the opposite side of the natural page direction. In a left-to-right course this is right by default.)
@@ -37,7 +37,7 @@ Defines the horizontal alignment for the footer content. Values available utilis
 * `space-between` (Adds space between the rendered elements.)
 
 ### \_verticalAlignment (string):
-Defines the vertical alignment for the footer content. Values available utilise the CSS property [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) and by default are:
+Defines the vertical alignment for the footer content. Values available utilise the CSS property [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items). The default value is `start`. It contains the following settings:
 * `start` (Aligns the content to the top of the container.)
 * `center` (Aligns the content to the center of the container vertically.)
 * `end` (Aligns the content to the bottom of the container.)
