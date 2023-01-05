@@ -72,9 +72,9 @@ export default class FooterView extends Backbone.View {
 
     this.$el.addClass('has-image');
     if (graphic._orientation === 'vertical') {
-      this.$el.addClass('is-vertical')
+      this.$el.addClass('is-vertical');
     } else {
-      this.$el.addClass('is-horizontal')
+      this.$el.addClass('is-horizontal');
     }
   }
 
