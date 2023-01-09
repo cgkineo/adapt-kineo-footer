@@ -14,9 +14,15 @@ export default class FooterView extends Backbone.View {
 
   setUpCourseContentInheritance() {
     const footer = this.model.get('_footer');
+    const footerCourseConfig = Adapt.course.get('_footer');
+
     if (footer._footerContent) return;
     // Inherit from the course.json
-    footer._footerContent = Adapt.course.get('_footer')._footerContent;
+    footer._footerContent = footerCourseConfig._footerContent;
+    footer._horizontalAlignment = footerCourseConfig._horizontalAlignment;
+    footer._verticalAlignment = footerCourseConfig._verticalAlignment;
+    footer._graphic = footerCourseConfig._graphic;
+    footer._classes = footerCourseConfig._classes;
   }
 
   isTrickled() {
@@ -44,7 +50,32 @@ export default class FooterView extends Backbone.View {
 
   postRender() {
     this.listenTo(Adapt, 'remove', this.remove);
-    this.$el.addClass(this.model.get('_footer')._classes);
+    this.addClasses();
+    this.contentAlignment();
+    this.logoAlignment();
+  }
+
+  addClasses() {
+    const classes = this.model.get('_footer')._classes;
+    this.$el.addClass(classes);
+  }
+
+  contentAlignment() {
+    const footer = this.model.get('_footer');
+    if (footer._horizontalAlignment) this.$el.addClass(`justify-${footer._horizontalAlignment}`);
+    if (footer._verticalAlignment) this.$el.addClass(`align-${footer._verticalAlignment}`);
+  }
+
+  logoAlignment() {
+    const graphic = this.model.get('_footer')._graphic;
+    if (!graphic || !graphic.src) return
+
+    this.$el.addClass('has-image');
+    if (graphic._orientation === 'vertical') {
+      this.$el.addClass('is-vertical');
+    } else {
+      this.$el.addClass('is-horizontal');
+    }
   }
 
 }

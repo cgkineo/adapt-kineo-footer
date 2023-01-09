@@ -35,6 +35,55 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text"
+                },
+                "_horizontalAlignment": {
+                  "type": "string",
+                  "required": false,
+                  "default": "start",
+                  "inputType": {"type":"Select", "options":["start","center","end","space-around","space-between"]},
+                  "title": "Horizontal alignment",
+                  "help": "Defines the horizontal alignment of the footer content. `start`: Aligns the content with the natural page direction. In a left-to-right course this is left by default. `center`: Aligns the content to the center of the container. `end`: Aligns the content to the opposite side of the natural page direction. In a left-to-right course this is right by default. `space-around`: Adds space either side of the rendered content. `space-between`: Adds space between the rendered elements. The default value is `start`."
+                },
+                "_verticalAlignment": {
+                  "type": "string",
+                  "required": false,
+                  "default": "start",
+                  "inputType": {"type":"Select", "options":["start","center","end"]},
+                  "title": "Vertical alignment",
+                  "help": "Defines the vertical alignment of the footer content. `start`: Aligns the content to the top of the container. `center`: Aligns the content to the center of the container vertically. `end`: Aligns the content to the bottom of the container. The default value is `start`."
+                },
+                "_graphic": {
+                  "type": "object",
+                  "required": true,
+                  "title": "Image",
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Image to be displayed in the footer content area."
+                    },
+                    "alt": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Alternative text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                      "translatable": true
+                    },
+                    "_orientation": {
+                      "type": "string",
+                      "required": false,
+                      "default": "horizontal",
+                      "inputType": {"type":"Select", "options":["horizontal","vertical"]},
+                      "title": "Image orientation",
+                      "help": "Defines the orientation of the image. `horizontal`: Sets the width of the image container to 10rem to simulate a horizontal image. `vertical`: Sets the width of the image container to 5rem to simulate a vertical image. The default value is `horizontal`."
+                    }
+                  }
                 }
               }
             }
@@ -64,6 +113,55 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text"
+                },
+                "_horizontalAlignment": {
+                  "type": "string",
+                  "required": false,
+                  "default": "start",
+                  "inputType": {"type":"Select", "options":["start","center","end","space-around","space-between"]},
+                  "title": "Horizontal alignment",
+                  "help": "Defines the horizontal alignment of the footer content. `start`: Aligns the content with the natural page direction. In a left-to-right course this is left by default. `center`: Aligns the content to the center of the container. `end`: Aligns the content to the opposite side of the natural page direction. In a left-to-right course this is right by default. `space-around`: Adds space either side of the rendered content. `space-between`: Adds space between the rendered elements. The default value is `start`."
+                },
+                "_verticalAlignment": {
+                  "type": "string",
+                  "required": false,
+                  "default": "start",
+                  "inputType": {"type":"Select", "options":["start","center","end"]},
+                  "title": "Vertical alignment",
+                  "help": "Defines the vertical alignment of the footer content. `start`: Aligns the content to the top of the container. `center`: Aligns the content to the center of the container vertically. `end`: Aligns the content to the bottom of the container. The default value is `start`."
+                },
+                "_graphic": {
+                  "type": "object",
+                  "required": true,
+                  "title": "Image",
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Image to be displayed in the footer content area."
+                    },
+                    "alt": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Alternative text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                      "translatable": true
+                    },
+                    "_orientation": {
+                      "type": "string",
+                      "required": false,
+                      "default": "horizontal",
+                      "inputType": {"type":"Select", "options":["horizontal","vertical"]},
+                      "title": "Image orientation",
+                      "help": "Defines the orientation of the image. `horizontal`: Sets the width of the image container to 10rem to simulate a horizontal image. `vertical`: Sets the width of the image container to 5rem to simulate a vertical image. The default value is `horizontal`."
+                    }
+                  }
                 }
               }
             }

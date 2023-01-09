@@ -3,7 +3,14 @@
     "_footer": {
         "_isEnabled": true,
         "_footerContent": "CGKineo copyright 2020",
-        "_classes": ""
+        "_classes": "",
+        "_horizontalAlignment": "start",
+        "_verticalAlignment": "start",
+        "_graphic": {
+            "src": "course/en/images/example.png",
+            "alt": "",
+            "_orientation": "horizontal"
+        }
     }
 
     // apply to contentObject.json
@@ -18,7 +25,14 @@
     "_footer": {
         "_isEnabled": true,
         "_footerContent": "CGKineo copyright 2020",
-        "_classes": ""
+        "_classes": "",
+        "_horizontalAlignment": "start",
+        "_verticalAlignment": "start",
+        "_graphic": {
+            "src": "course/en/images/example.png",
+            "alt": "",
+            "_orientation": "horizontal"
+        }
     }
     //
 
@@ -28,5 +42,12 @@
     "_footer": {
         "_isEnabled": true,
         "_footerContent": "CGKineo copyright 2020",
-        "_classes": ""
+        "_classes": "",
+        "_horizontalAlignment": "start",
+        "_verticalAlignment": "start",
+        "_graphic": {
+            "src": "course/en/images/example.png",
+            "alt": "",
+            "_orientation": "horizontal"
+        }
     }
