@@ -57,7 +57,6 @@ Defines the orientation of the image. It contains the following settings:
 * `vertical` (Sets the width of the image container to 5rem to simulate a vertical image.)
 
 ----------------------------
-**Version number:** 2.0.0 <br>
 **Framework versions:** 5.8+ <br>
 **Author / maintainer:** CGKineo <br>
 **Accessibility support:** WAI AA <br>
