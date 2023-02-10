@@ -23,7 +23,7 @@
             },
             "_footerContent": {
               "type": "string",
-              "title": "Item Body",
+              "title": "Footer Body",
               "default": "",
               "_backboneForms": "TextArea"
             },
