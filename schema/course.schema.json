@@ -18,7 +18,7 @@
           "properties": {
             "_isEnabled": {
               "type": "boolean",
-              "title": "Is enabled",
+              "title": "Enable Footer",
               "default": false
             },
             "_footerContent": {
