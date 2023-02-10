@@ -68,7 +68,7 @@ export default class FooterView extends Backbone.View {
 
   logoAlignment() {
     const graphic = this.model.get('_footer')._graphic;
-    if (!graphic || !graphic.src) return
+    if (!graphic || !graphic.src) return;
 
     this.$el.addClass('has-image');
     if (graphic._orientation === 'vertical') {

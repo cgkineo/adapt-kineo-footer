@@ -1,0 +1,102 @@
+{
+  "$anchor": "footer-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+        "_footer": {
+          "type": "object",
+          "title": "Footer",
+          "default": {},
+          "required": [
+            "_graphic"
+          ],
+          "properties": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable Footer",
+              "default": false
+            },
+            "_footerContent": {
+              "type": "string",
+              "title": "Footer Body",
+              "default": "",
+              "_backboneForms": "TextArea"
+            },
+            "_classes": {
+              "type": "string",
+              "title": "Classes",
+              "default": ""
+            },
+            "_horizontalAlignment": {
+              "type": "string",
+              "title": "Horizontal alignment",
+              "description": "Defines the horizontal alignment of the footer content. `start`: Aligns the content with the natural page direction. In a left-to-right course this is left by default. `center`: Aligns the content to the center of the container. `end`: Aligns the content to the opposite side of the natural page direction. In a left-to-right course this is right by default. `space-around`: Adds space either side of the rendered content. `space-between`: Adds space between the rendered elements. The default value is `start`.",
+              "default": "start",
+              "enum": [
+                "start",
+                "center",
+                "end",
+                "space-around",
+                "space-between"
+              ],
+              "_backboneForms": "Select"
+            },
+            "_verticalAlignment": {
+              "type": "string",
+              "title": "Vertical alignment",
+              "description": "Defines the vertical alignment of the footer content. `start`: Aligns the content to the top of the container. `center`: Aligns the content to the center of the container vertically. `end`: Aligns the content to the bottom of the container. The default value is `start`.",
+              "default": "start",
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ],
+              "_backboneForms": "Select"
+            },
+            "_graphic": {
+              "type": "object",
+              "title": "Image",
+              "properties": {
+                "src": {
+                  "type": "string",
+                  "isObjectId": true,
+                  "title": "Src",
+                  "description": "Image to be displayed in the footer content area.",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                },
+                "alt": {
+                  "type": "string",
+                  "title": "Alternative text",
+                  "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                  "default": "",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_orientation": {
+                  "type": "string",
+                  "title": "Image orientation",
+                  "description": "Defines the orientation of the image. `horizontal`: Sets the width of the image container to 10rem to simulate a horizontal image. `vertical`: Sets the width of the image container to 5rem to simulate a vertical image. The default value is `horizontal`.",
+                  "default": "horizontal",
+                  "enum": [
+                    "horizontal",
+                    "vertical"
+                  ],
+                  "_backboneForms": "Select"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
