@@ -54,7 +54,7 @@
                 },
                 "_graphic": {
                   "type": "object",
-                  "required": true,
+                  "required": false,
                   "title": "Image",
                   "properties": {
                     "src": {
@@ -132,7 +132,7 @@
                 },
                 "_graphic": {
                   "type": "object",
-                  "required": true,
+                  "required": false,
                   "title": "Image",
                   "properties": {
                     "src": {
