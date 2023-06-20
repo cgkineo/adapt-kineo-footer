@@ -17,17 +17,20 @@
             "_isEnabled": {
               "type": "boolean",
               "title": "Enable Footer",
+              "description": "Enable or disable the 'Footer' feature",
               "default": false
             },
             "_footerContent": {
               "type": "string",
               "title": "Footer Body",
+              "description": "Content for the page footer",
               "default": "",
               "_backboneForms": "TextArea"
             },
             "_classes": {
               "type": "string",
               "title": "Classes",
+              "description": "CSS classes for styling the footer",
               "default": ""
             },
             "_horizontalAlignment": {

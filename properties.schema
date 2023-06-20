@@ -22,19 +22,22 @@
                   "type": "boolean",
                   "default": false,
                   "title": "Is enabled",
-                  "inputType": "Checkbox"
+                  "inputType": "Checkbox",
+                  "help": "Enable or disable the 'Footer' feature"
                 },
                 "_footerContent": {
                   "type": "string",
                   "default": "",
                   "title": "Footer Body",
-                  "inputType": "TextArea"
+                  "inputType": "TextArea",
+                  "help": "Content for the page footer"
                 },
                 "_classes": {
                   "type": "string",
                   "default": "",
                   "title": "Classes",
-                  "inputType": "Text"
+                  "inputType": "Text",
+                  "help": "CSS classes for styling the footer"
                 },
                 "_horizontalAlignment": {
                   "type": "string",
