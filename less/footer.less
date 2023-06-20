@@ -1,33 +1,63 @@
 .footer {
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     .l-container-responsive(@max-width);
+
+    @media (min-width: @device-width-medium) {
+      flex-wrap: nowrap;
+    }
   }
 
-  &.reverse-content-direction &__inner {
-    justify-content: flex-end;
-  }
+  // horizontal alignment
+  &.justify-start &__inner { justify-content: flex-start; }
+  &.justify-end &__inner { justify-content: flex-end; }
+  &.justify-center &__inner { justify-content: center; }
+  &.justify-space-around &__inner { justify-content: space-around; }
+  &.justify-space-between &__inner { justify-content: space-between; }
 
-  &.center-content &__inner {
-    justify-content: center;
-  }
-
-  &.space-around-content &__inner {
-    justify-content: space-around;
-  }
-
-  &.space-between-content &__inner {
-    justify-content: space-between;
-  }
+  // vertical alignment
+  &.align-start &__inner { align-items: flex-start; }
+  &.align-center &__inner { align-items: center; }
+  &.align-end &__inner { align-items: flex-end; }
 }
 
 // --------------------------------------------------
-// --------------------------------------------------
 // THEME
-// --------------------------------------------------
 // --------------------------------------------------
 .footer {
   &__inner {
-    padding: @item-padding;
+    padding: @component-padding-ver @component-padding-hoz;
   }
+
+  &__image-container {
+    margin: @item-margin * 2;
+  }
+
+  &.is-horizontal &__image-container {
+    min-width: 10rem;
+  }
+
+  &.is-vertical &__image-container {
+    min-width: 5rem;
+  }
+}
+
+// Footer color mixin
+// Add to footer _classes property to enable
+// e.g. 'footer-color black'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.footer-color-mixin(black, white);
+.footer-color-mixin(background, background-inverted);
+.footer-color-mixin(transparent-light, font-color);
+.footer-color-mixin(transparent-dark, font-color-inverted);
+
+.footer-color-mixin(@color, @color-inverted) {
+
+.footer-color.@{color} {
+  background-color: @@color;
+  color: @@color-inverted;
+}
+
 }
