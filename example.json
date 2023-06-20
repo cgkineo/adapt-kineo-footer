@@ -1,3 +1,10 @@
+// NOTE: Classes intentionally do not cascade since there is no way to
+// distinguish the desire for classes to be applied to all pages from
+// the desire to have the class applied only to the course menu.
+// While classes applied in contentObjects.json will override classes
+// applied in course.json, there is no way to *remove* them without
+// overriding with an "anti-class".
+
     // Menu + global page footer
     // apply to course.json
     "_footer": {
@@ -17,8 +24,6 @@
     "_footer": {
         "_isEnabled": true
     }
-    //
-
 
     // Menu only footer
     // apply to course.json
@@ -51,3 +56,4 @@
             "_orientation": "horizontal"
         }
     }
+
