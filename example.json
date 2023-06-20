@@ -20,6 +20,11 @@
         }
     }
 
+    // apply to contentObject.json
+    "_footer": {
+        "_isEnabled": true
+    }
+
     // Menu only footer
     // apply to course.json
     "_footer": {
