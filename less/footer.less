@@ -26,6 +26,9 @@
 // THEME
 // --------------------------------------------------
 .footer {
+  position: relative;
+  width: 100%;
+
   &__inner {
     padding: @component-padding-ver @component-padding-hoz;
   }
@@ -49,6 +52,7 @@
 // Note: both arguments must be predefined variables
 // --------------------------------------------------
 .footer-color-mixin(black, white);
+.footer-color-mixin(white, black);
 .footer-color-mixin(background, background-inverted);
 .footer-color-mixin(transparent-light, font-color);
 .footer-color-mixin(transparent-dark, font-color-inverted);

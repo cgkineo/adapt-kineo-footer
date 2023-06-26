@@ -25,6 +25,7 @@ This is the main text for the footer.
 CSS class name(s) to be applied to the footer. Classes available by default are:
 
 - `footer-color black` (Sets the background color of the footer element to black and changes the font color to white.)
+- `footer-color white` (Sets the background color of the footer element to white and changes the font color to black.)
 - `footer-color background` (Sets the background color of the footer element to use the variable `@background` (default is black) and changes the font color to use the variable `@background-inverted` (default is white). These variables can be changed in the `_colors.less` file in the Framework or through the Theme Picker in the Authoring Tool.)
 - `footer-color transparent-light` (Sets the background color of the footer element to transparent and changes the font color to black. Useful for displaying text over a light background image.)
 - `footer-color transparent-dark` (Sets the background color of the footer element to transparent and changes the font color to white. Useful for displaying text over a dark background image.)
