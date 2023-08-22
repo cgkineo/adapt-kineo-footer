@@ -1,6 +1,6 @@
 {
   "name": "adapt-kineo-footer",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "framework": ">=5.8",
   "extension": "footer",
   "displayName": "Footer",
