@@ -1,11 +1,17 @@
 {
   "name": "adapt-kineo-footer",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "framework": ">=5.8",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cgkineo/adapt-kineo-footer.git"
+  },
+  "homepage": "https://github.com/cgkineo/adapt-kineo-footer",
+  "issues": "https://github.com/cgkineo/adapt-kineo-footer/issues/",
   "extension": "footer",
   "displayName": "Footer",
   "description": "An extension that enables menu and page level footers which consist of a text and image area and some pre-bundled layouts.",
-  "main": "/js/adapt-footer.js",
+  "main": "/js/adapt-kineo-footer.js",
   "keywords": [
     "adapt-plugin",
     "adapt-extension"
