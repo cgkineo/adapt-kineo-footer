@@ -1,6 +1,6 @@
-# adapt-footer
+# adapt-kineo-footer
 
-**Footer** can be configured at menu and page level.
+**Footer** is an extension that adds a menu and page level footer. The footer consists of a text area, graphic and some pre-bundled layout classes.
 
 ## Settings overview
 
@@ -8,19 +8,19 @@
 
 ## Attributes
 
-### \_footer (object):
+### \_footer (object)
 
 The footer object that defines the content to render. It contains the following settings:
 
-### \_isEnabled (boolean):
+### \_isEnabled (boolean)
 
 Turns on and off the **Footer** extension. Can be set in _course.json_, and _contentObjects.json_ to enable **Footer** where required.
 
-### \_footerContent (string):
+### \_footerContent (string)
 
 This is the main text for the footer.
 
-### \_classes (string):
+### \_classes (string)
 
 CSS class name(s) to be applied to the footer. Classes available by default are:
 
@@ -34,7 +34,7 @@ The first class of two is required to apply a solid background color to the foot
 
 The `footer-color` mixin can be extended to include custom colors by adding another entry [here](https://github.com/cgkineo/adapt-footer/blob/master/less/footer.less#L51).
 
-### \_horizontalAlignment (string):
+### \_horizontalAlignment (string)
 
 Defines the horizontal alignment for the footer content. Values available utilise the CSS property [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content). The default value is `start`. It contains the following settings:
 
@@ -44,7 +44,7 @@ Defines the horizontal alignment for the footer content. Values available utilis
 - `space-around` (Adds space either side of the rendered content.)
 - `space-between` (Adds space between the rendered elements.)
 
-### \_verticalAlignment (string):
+### \_verticalAlignment (string)
 
 Defines the vertical alignment for the footer content. Values available utilise the CSS property [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items). The default value is `start`. It contains the following settings:
 
@@ -52,19 +52,19 @@ Defines the vertical alignment for the footer content. Values available utilise 
 - `center` (Aligns the content to the center of the container vertically.)
 - `end` (Aligns the content to the bottom of the container.)
 
-### \_graphic (object):
+### \_graphic (object)
 
 The graphic object that defines the image which is rendered. The assumed use case for this image is to display a client's logo. It contains the following settings:
 
-#### src (string):
+#### src (string)
 
 File name (including path) of the image. Path should be relative to the `src` folder (e.g. `"course/en/images/origami-menu-two.jpg"`).
 
-#### alt (string):
+#### alt (string)
 
 The alternative text for this image. Assign [alt text](https://github.com/adaptlearning/adapt_framework/wiki/Providing-good-alt-text) to images that convey course content only.
 
-#### \_orientation (string):
+#### \_orientation (string)
 
 Defines the orientation of the image. It contains the following settings:
 
@@ -76,4 +76,4 @@ Defines the orientation of the image. It contains the following settings:
 **Author / maintainer:** CGKineo <br>
 **Accessibility support:** WAI AA <br>
 **RTL support:** Yes <br>
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 14 for macOS/iOS/iPadOS, Opera <br>
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, Safari 14 for macOS/iOS/iPadOS, Opera<br>
