@@ -19,6 +19,11 @@
               "title": "Enable Footer",
               "default": false
             },
+            "_inheritCourseConfig": {
+              "type": "boolean",
+              "title": "Inherit project config?",
+              "default": true
+            },
             "_footerContent": {
               "type": "string",
               "title": "Footer Body",
