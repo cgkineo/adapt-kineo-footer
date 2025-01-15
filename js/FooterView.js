@@ -15,8 +15,9 @@ export default class FooterView extends Backbone.View {
   setUpCourseContentInheritance() {
     const footer = this.model.get('_footer');
     const footerCourseConfig = Adapt.course.get('_footer');
+    const inheritCourseConfig = footer._inheritCourseConfig;
 
-    if (footer._footerContent) return;
+    if (!inheritCourseConfig) return;
     // Inherit from the course.json
     footer._footerContent = footerCourseConfig._footerContent;
     footer._horizontalAlignment = footerCourseConfig._horizontalAlignment;

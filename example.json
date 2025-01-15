@@ -41,7 +41,6 @@
     }
     //
 
-
     // Page only footer
     // apply to contentObject.json
     "_footer": {
@@ -52,6 +51,36 @@
         "_verticalAlignment": "start",
         "_graphic": {
             "src": "course/en/images/example.png",
+            "alt": "",
+            "_orientation": "horizontal"
+        }
+    }
+
+    // Different footers on menu and page
+    // apply to course.json
+    "_footer": {
+        "_isEnabled": true,
+        "_footerContent": "Kineo and the Kineo logo are trademarks of CGKineo or an affiliate.",
+        "_classes": "",
+        "_horizontalAlignment": "start",
+        "_verticalAlignment": "start",
+        "_graphic": {
+            "src": "course/en/images/example.png",
+            "alt": "",
+            "_orientation": "horizontal"
+        }
+    }
+
+    // apply to contentObjects.json
+    "_footer": {
+        "_isEnabled": true,
+        "_inheritCourseConfig": false,
+        "_footerContent": "CGKineo copyright 2020",
+        "_classes": "",
+        "_horizontalAlignment": "start",
+        "_verticalAlignment": "start",
+        "_graphic": {
+            "src": "",
             "alt": "",
             "_orientation": "horizontal"
         }

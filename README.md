@@ -16,6 +16,10 @@ The footer object that defines the content to render. It contains the following 
 
 Turns on and off the **Footer** extension. Can be set in _course.json_, and _contentObjects.json_ to enable **Footer** where required.
 
+### \_inheritCourseConfig (boolean)
+
+Controls whether the page footer inherits the menu footer properties. Config option only available in _contentObjects.json_. Acceptable values are `true` and `false`. The default value is `true`.
+
 ### \_footerContent (string)
 
 This is the main text for the footer.

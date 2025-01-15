@@ -105,6 +105,12 @@
                   "title": "Is enabled",
                   "inputType": "Checkbox"
                 },
+                "_inheritCourseConfig": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Inherit project config?",
+                  "inputType": "Checkbox"
+                },
                 "_footerContent": {
                   "type": "string",
                   "default": "",
