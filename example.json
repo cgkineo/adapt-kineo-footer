@@ -9,7 +9,7 @@
     // apply to course.json
     "_footer": {
         "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2020",
+        "_footerContent": "Mindtools Kineo copyright 2026",
         "_classes": "",
         "_horizontalAlignment": "start",
         "_verticalAlignment": "start",
@@ -29,7 +29,7 @@
     // apply to course.json
     "_footer": {
         "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2020",
+        "_footerContent": "Mindtools Kineo copyright 2026",
         "_classes": "",
         "_horizontalAlignment": "start",
         "_verticalAlignment": "start",
@@ -45,7 +45,7 @@
     // apply to contentObject.json
     "_footer": {
         "_isEnabled": true,
-        "_footerContent": "CGKineo copyright 2020",
+        "_footerContent": "Mindtools Kineo copyright 2026",
         "_classes": "",
         "_horizontalAlignment": "start",
         "_verticalAlignment": "start",
@@ -60,7 +60,7 @@
     // apply to course.json
     "_footer": {
         "_isEnabled": true,
-        "_footerContent": "Kineo and the Kineo logo are trademarks of CGKineo or an affiliate.",
+        "_footerContent": "Mindtools Kineo and the Mindtools Kineo logo are trademarks of Mindtools Kineo or an affiliate.",
         "_classes": "",
         "_horizontalAlignment": "start",
         "_verticalAlignment": "start",
@@ -75,7 +75,7 @@
     "_footer": {
         "_isEnabled": true,
         "_inheritCourseConfig": false,
-        "_footerContent": "CGKineo copyright 2020",
+        "_footerContent": "Mindtools Kineo copyright 2026",
         "_classes": "",
         "_horizontalAlignment": "start",
         "_verticalAlignment": "start",
