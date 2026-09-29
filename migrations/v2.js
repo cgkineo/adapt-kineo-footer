@@ -1,18 +1,37 @@
 import { describe, whereContent, whereFromPlugin, mutateContent, checkContent, updatePlugin, testStopWhere, testSuccessWhere } from 'adapt-migrations';
+import semver from 'semver';
+
+// Published as adapt-footer until v2.0.5, renamed to adapt-kineo-footer at v2.0.6
+const pluginNames = ['adapt-footer', 'adapt-kineo-footer'];
+const isFooterVersion = range => plugins => plugins.some(plugin => pluginNames.includes(plugin.name) && semver.satisfies(plugin.version, range));
+
+// v1 layout classes, replaced by _horizontalAlignment at v2.0.0. Listed in v1.1.0 footer.less rule order, so the last match is the class whose rule won
+const legacyLayoutClasses = {
+  'reverse-content-direction': 'end',
+  'center-content': 'center',
+  'space-around-content': 'space-around',
+  'space-between-content': 'space-between'
+};
+const getLegacyAlignment = classes => {
+  const tokens = typeof classes === 'string' ? classes.split(/\s+/) : [];
+  const match = Object.keys(legacyLayoutClasses).filter(name => tokens.includes(name)).pop();
+  return match ? legacyLayoutClasses[match] : 'start';
+};
 
 describe('adapt-kineo-footer - v1.1.0 > v2.0.0', async () => {
-  let footers;
+  let footers, horizontalAlignments;
 
-  whereFromPlugin('adapt-kineo-footer - from v1.1.0', { name: 'adapt-kineo-footer', version: '<2.0.0' });
+  whereFromPlugin('adapt-kineo-footer - from v1.1.0', isFooterVersion('<2.0.0'));
 
   whereContent('adapt-kineo-footer - where _footer is present', async content => {
     footers = content.filter(({ _footer }) => Boolean(_footer)).map(({ _footer }) => _footer);
+    horizontalAlignments = footers.map(({ _classes }) => getLegacyAlignment(_classes));
     return footers.length;
   });
 
   mutateContent('adapt-kineo-footer - add _footer._horizontalAlignment', async () => {
-    footers.forEach(footer => {
-      footer._horizontalAlignment = 'start';
+    footers.forEach((footer, index) => {
+      footer._horizontalAlignment = horizontalAlignments[index];
     });
     return true;
   });
@@ -32,7 +51,7 @@ describe('adapt-kineo-footer - v1.1.0 > v2.0.0', async () => {
   });
 
   checkContent('adapt-kineo-footer - check _footer._horizontalAlignment attribute', async () => {
-    const isValid = footers.every(footer => footer._horizontalAlignment === 'start');
+    const isValid = footers.every((footer, index) => footer._horizontalAlignment === horizontalAlignments[index]);
     if (!isValid) throw new Error('adapt-kineo-footer - _horizontalAlignment not added to every instance of _footer');
     return true;
   });
@@ -49,10 +68,11 @@ describe('adapt-kineo-footer - v1.1.0 > v2.0.0', async () => {
     return true;
   });
 
-  updatePlugin('adapt-kineo-footer - update to v2.0.0', { name: 'adapt-kineo-footer', version: '2.0.0', framework: '>=5.8' });
+  updatePlugin('adapt-kineo-footer - update adapt-footer to v2.0.0', { name: 'adapt-footer', version: '2.0.0', framework: '>=5.8' });
+  updatePlugin('adapt-kineo-footer - update adapt-kineo-footer to v2.0.0', { name: 'adapt-kineo-footer', version: '2.0.0', framework: '>=5.8' });
 
   testSuccessWhere('course and contentobject with _footer already present', {
-    fromPlugins: [{ name: 'adapt-kineo-footer', version: '1.1.0' }],
+    fromPlugins: [{ name: 'adapt-footer', version: '1.1.0' }],
     content: [
       { _type: 'course', _footer: { _isEnabled: true, _footerContent: 'Copyright', _classes: '' } },
       { _type: 'page', _footer: { _isEnabled: true } },
@@ -61,15 +81,25 @@ describe('adapt-kineo-footer - v1.1.0 > v2.0.0', async () => {
   });
 
   testSuccessWhere('only course has _footer', {
-    fromPlugins: [{ name: 'adapt-kineo-footer', version: '1.1.0' }],
+    fromPlugins: [{ name: 'adapt-footer', version: '1.1.0' }],
     content: [
       { _type: 'course', _footer: { _isEnabled: true } },
       { _type: 'page' }
     ]
   });
 
+  testSuccessWhere('legacy layout classes mapped to _horizontalAlignment', {
+    fromPlugins: [{ name: 'adapt-footer', version: '1.1.0' }],
+    content: [
+      { _type: 'course', _footer: { _isEnabled: true, _classes: 'center-content' } },
+      { _type: 'page', _footer: { _isEnabled: true, _classes: 'custom-class reverse-content-direction' } },
+      { _type: 'page', _footer: { _isEnabled: true, _classes: 'space-between-content space-around-content' } },
+      { _type: 'menu', _footer: { _isEnabled: true, _classes: 'space-around-content' } }
+    ]
+  });
+
   testStopWhere('no _footer present anywhere', {
-    fromPlugins: [{ name: 'adapt-kineo-footer', version: '1.1.0' }],
+    fromPlugins: [{ name: 'adapt-footer', version: '1.1.0' }],
     content: [
       { _type: 'course' },
       { _type: 'page' }
@@ -77,14 +107,20 @@ describe('adapt-kineo-footer - v1.1.0 > v2.0.0', async () => {
   });
 
   testStopWhere('incorrect version', {
-    fromPlugins: [{ name: 'adapt-kineo-footer', version: '2.0.0' }]
+    fromPlugins: [{ name: 'adapt-footer', version: '2.0.0' }],
+    content: [{ _type: 'page', _footer: { _isEnabled: true } }]
+  });
+
+  testStopWhere('incorrect version after rename', {
+    fromPlugins: [{ name: 'adapt-kineo-footer', version: '2.0.6' }],
+    content: [{ _type: 'page', _footer: { _isEnabled: true } }]
   });
 });
 
 describe('adapt-kineo-footer - v2.1.0 > v2.2.0', async () => {
   let course, contentObjectFooters;
 
-  whereFromPlugin('adapt-kineo-footer - from v2.1.0', { name: 'adapt-kineo-footer', version: '<2.2.0' });
+  whereFromPlugin('adapt-kineo-footer - from v2.1.0', isFooterVersion('<2.2.0'));
 
   whereContent('adapt-kineo-footer - where contentobject _footer is present', async content => {
     course = content.find(({ _type }) => _type === 'course');
@@ -107,7 +143,16 @@ describe('adapt-kineo-footer - v2.1.0 > v2.2.0', async () => {
     return true;
   });
 
-  updatePlugin('adapt-kineo-footer - update to v2.2.0', { name: 'adapt-kineo-footer', version: '2.2.0', framework: '>=5.8' });
+  updatePlugin('adapt-kineo-footer - update adapt-footer to v2.2.0', { name: 'adapt-footer', version: '2.2.0', framework: '>=5.8' });
+  updatePlugin('adapt-kineo-footer - update adapt-kineo-footer to v2.2.0', { name: 'adapt-kineo-footer', version: '2.2.0', framework: '>=5.8' });
+
+  testSuccessWhere('pre-rename adapt-footer with contentobject _footer', {
+    fromPlugins: [{ name: 'adapt-footer', version: '2.0.5' }],
+    content: [
+      { _type: 'course', _footer: { _isEnabled: true, _footerContent: 'Copyright' } },
+      { _type: 'page', _footer: { _isEnabled: true } }
+    ]
+  });
 
   testSuccessWhere('course and contentobjects with _footer present', {
     fromPlugins: [{ name: 'adapt-kineo-footer', version: '2.1.0' }],
@@ -135,6 +180,7 @@ describe('adapt-kineo-footer - v2.1.0 > v2.2.0', async () => {
   });
 
   testStopWhere('incorrect version', {
-    fromPlugins: [{ name: 'adapt-kineo-footer', version: '2.2.0' }]
+    fromPlugins: [{ name: 'adapt-kineo-footer', version: '2.2.0' }],
+    content: [{ _type: 'page', _footer: { _isEnabled: true } }]
   });
 });
