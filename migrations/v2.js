@@ -94,13 +94,13 @@ describe('adapt-kineo-footer - v2.1.0 > v2.2.0', async () => {
 
   mutateContent('adapt-kineo-footer - add contentobject _footer._inheritCourseConfig', async () => {
     contentObjectFooters.forEach(footer => {
-      footer._inheritCourseConfig = true;
+      footer._inheritCourseConfig = !footer._footerContent;
     });
     return true;
   });
 
   checkContent('adapt-kineo-footer - check contentobject _footer._inheritCourseConfig attribute', async () => {
-    const isValid = contentObjectFooters.every(footer => footer._inheritCourseConfig === true);
+    const isValid = contentObjectFooters.every(footer => footer._inheritCourseConfig === !footer._footerContent);
     if (!isValid) throw new Error('adapt-kineo-footer - _inheritCourseConfig not added to every contentobject instance of _footer');
     const isCourseUnaffected = !course._footer || !Object.prototype.hasOwnProperty.call(course._footer, '_inheritCourseConfig');
     if (!isCourseUnaffected) throw new Error('adapt-kineo-footer - _inheritCourseConfig should not be added to the course _footer');
